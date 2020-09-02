@@ -15,28 +15,44 @@ const api = axios.create({
   }
 });
 
-mock.onGet("/videos").reply(200, [{
-  imgUrl: 'https://umirzakov.site/static/84ee5cc5de5e81ad54c1f37c3c1a1359/Beware_Intro.jpg',
-  webmUrl: 'https://umirzakov.site/static/fbc080874ef31c90dd427a9b051ee4e5/Beware_Intro.webm',
-  title: "titel"
-},
-{
-  imgUrl: 'https://umirzakov.site/static/ca11129044836553776d1bbd59807b73/empty_city.jpg',
-  webmUrl: 'https://umirzakov.site/static/cbd021cd0c0101b25eaa3f58d9b924a2/empty_city.webm',
-  title: "titel"
-},
+mock.onGet("/videos").reply(200, [
 
-{
-  imgUrl: 'https://umirzakov.site/static/84ee5cc5de5e81ad54c1f37c3c1a1359/Beware_Intro.jpg',
-  webmUrl: 'https://umirzakov.site/static/fbc080874ef31c90dd427a9b051ee4e5/Beware_Intro.webm',
-  title: "titel"
-},
+  {
+    imgUrl: 'https://umirzakov.site/static/ca11129044836553776d1bbd59807b73/empty_city.jpg',
+    webmUrl: 'https://umirzakov.site/static/cbd021cd0c0101b25eaa3f58d9b924a2/empty_city.webm',
+    title: "titel"
+  },
 
-{
-  imgUrl: 'https://umirzakov.site/static/84ee5cc5de5e81ad54c1f37c3c1a1359/Beware_Intro.jpg',
-  webmUrl: 'https://umirzakov.site/static/fbc080874ef31c90dd427a9b051ee4e5/Beware_Intro.webm',
-  title: "titel"
-},
+  {
+    imgUrl: 'https://umirzakov.site/static/b4761178b1cfdecba17a16e1cab13c3a/adrenaline_call.jpg',
+    webmUrl: 'https://umirzakov.site/static/68f76c3f03d587e39c770bfe81efc168/adrenaline_call.webm',
+    title: "titel"
+  },
+
+  {
+    imgUrl: 'https://umirzakov.site/static/bab2efbbb209e08e6ecde8a7f64a813f/Weakspot.jpg',
+    webmUrl: 'https://umirzakov.site/static/907c11759ef124ee134b3f53eefe749f/Weakspot.webm',
+    title: "titel"
+  },
+
+  {
+    imgUrl: 'https://umirzakov.site/static/69a8c305ec0fca749b555824eb615288/Dombra_Trap.jpg',
+    webmUrl: 'https://umirzakov.site/static/cea95b676cfc087e4c737490a1d925cf/Dombra_Trap.webm',
+    title: "titel"
+  },
+
+  {
+    imgUrl: 'https://umirzakov.site/static/ca11129044836553776d1bbd59807b73/empty_city.jpg',
+    webmUrl: 'https://umirzakov.site/static/cbd021cd0c0101b25eaa3f58d9b924a2/empty_city.webm',
+    title: "titel"
+  },
+
+  {
+    imgUrl: 'https://umirzakov.site/static/ca11129044836553776d1bbd59807b73/empty_city.jpg',
+    webmUrl: 'https://umirzakov.site/static/cbd021cd0c0101b25eaa3f58d9b924a2/empty_city.webm',
+    title: "titel"
+  },
+
 
 
 ])

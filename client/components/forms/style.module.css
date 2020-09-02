@@ -1,0 +1,12 @@
+.input {
+  background: var(--opposite-color);
+  border: 0;
+  /* border: 1px solid var(--opposite-color); */
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 8px;
+}
+
+.label {
+  font-size: 24px
+}

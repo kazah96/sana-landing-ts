@@ -96,3 +96,8 @@
   opacity: var(--video-label-opacity-to);
   transform: scale(1.1);
 }
+
+.overlay {
+  border-radius: 5px;
+  border: 2px solid rgb(51, 145, 145);
+}
