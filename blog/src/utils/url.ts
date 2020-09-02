@@ -6,4 +6,4 @@ function getSlugUrl(title) {
     return title.replace(/\s/gi, '-')
 }
 
-module.exports = { getSlugUrl }
+export { getSlugUrl }

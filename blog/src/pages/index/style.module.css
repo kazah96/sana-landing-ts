@@ -1,8 +1,8 @@
-.thumbnails-container > a {
+.thumbnails_container > a {
     font-size: 0;
 }
 
-.thumbnails-container {
+.thumbnails_container {
     line-height: 0;
     transition: opacity 0.5s ease;
 }

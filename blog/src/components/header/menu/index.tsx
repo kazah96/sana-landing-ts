@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
-import './style.css'
-import { Link } from 'gatsby'
+import style from './style.module.css'
 
 class Menu extends PureComponent {
   render() {
@@ -8,14 +7,12 @@ class Menu extends PureComponent {
 
     return (
       <React.Fragment>
-        <nav>
+        <nav className={style.menu}>
           <ul>
             {links.map(({ title, url }) => {
               return (
                 <li key={title}>
-                  <Link className="link" activeClassName="selected" to={url}>
-                    {title}
-                  </Link>
+                 <title> {url} </title>
                 </li>
               )
             })}

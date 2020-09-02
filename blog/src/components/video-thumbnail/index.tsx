@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react"
-import "./style.css"
+import style from "./style.module.css"
 import PropTypes from "prop-types"
 import cn from "classnames"
 
@@ -60,8 +60,8 @@ class VideoThumbnail extends PureComponent {
   render() {
     const { imgUrl, webmUrl, name } = this.props
     const { isLoading } = this.state
-    const thumbClass = cn("thumbnail")
-    const videoClass = cn("img", { hide: isLoading })
+    const thumbClass = style.thumbnail
+    const videoClass = cn(style.img, { [style.hide]: isLoading })
 
     return (
       <span
@@ -87,7 +87,7 @@ class VideoThumbnail extends PureComponent {
           <source src={imgUrl} />
           {/* Костыль для того чтоб на айфоне лоадер отрабатывал нормально. Нужно пофиксить в дальнейшем*/}
         </video>
-        <div className="label">{name}</div>
+        <div className={style.label}>{name}</div>
       </span>
     )
   }

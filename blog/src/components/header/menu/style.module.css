@@ -1,11 +1,16 @@
-ul,
-li {
+.menu {
+
+}
+
+.menu ul,
+.menu li {
   display: inline;
 }
 
-li {
+.menu li {
   margin-right: 40px;
 }
+
 .link {
   color: var(--gray-color);
   text-decoration: none;

@@ -2,7 +2,7 @@ import React, { PureComponent } from "react"
 
 import cn from "classnames"
 
-import "./style.css"
+import style from "./style.module.css"
 
 import Menu from "./menu"
 
@@ -10,6 +10,7 @@ const defaultLinks = [{ title: "portfolio", url: "/" }]
 
 class HeaderPage extends PureComponent {
   changeTheme = () => {
+    console.log("change theme")
     const theme = localStorage.getItem("theme")
 
     if (theme === "dark") {
@@ -22,17 +23,18 @@ class HeaderPage extends PureComponent {
   }
 
   render() {
-    const { title, subtitle, pages, theme } = this.props
+    let { title, subtitle, theme } = this.props
 
+theme = "dark"
     const links = [
       ...defaultLinks,
-      ...pages.map(page => ({ ...page, url: `/${page.url}` })),
     ]
+
 
     return (
       <React.Fragment>
-        <header className="header">
-          <div className={cn("brands", { "brands-dark": theme === "dark" })}>
+        <header className={style.header}>
+          <div className={cn(style.brands, { [style["brands-dark"]]: theme === "dark" })}>
             <i
               role="button"
               onKeyPress={this.changeTheme}
@@ -66,9 +68,9 @@ class HeaderPage extends PureComponent {
             </a>
           </div>
           <a href="/" style={{ textDecoration: "none" }}>
-            <h2 className="name">{title}</h2>
+            <h2 className={style.name}>{title}</h2>
           </a>
-          <h4 className="sub-name">{subtitle}</h4>
+          <h4 className={style.sub_name}>{subtitle}</h4>
           <Menu links={links} />
         </header>
       </React.Fragment>

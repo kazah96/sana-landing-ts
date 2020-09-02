@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
-import './style.css'
+import style from './style.module.css'
 import SEO from '../seo'
-import Layout from '../layout'
 
 class ArticleTemplate extends PureComponent {
   render() {
@@ -11,9 +10,7 @@ class ArticleTemplate extends PureComponent {
     return (
       <>
         <SEO lang="en" title={title} description={content.slice(0, 40)} />
-        <Layout>
-          <ReactMarkdown className="markdown-field" source={content} />
-        </Layout>
+        <ReactMarkdown className={style["markdown-field"]} source={content} />
       </>
     )
   }

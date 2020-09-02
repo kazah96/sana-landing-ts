@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import './style.css'
-import Layout from '../layout'
 import SEO from '../seo'
 
 class VideoPageTemplate extends PureComponent {
@@ -10,7 +9,6 @@ class VideoPageTemplate extends PureComponent {
     return (
       <React.Fragment>
         <SEO lang="en" title={title} description={description} />
-        <Layout>
           <div className="video-page-container">
             <iframe
               title={title}
@@ -24,7 +22,6 @@ class VideoPageTemplate extends PureComponent {
             ></iframe>
             <div className="video-description">{description}</div>
           </div>
-        </Layout>
       </React.Fragment>
     )
   }
