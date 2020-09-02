@@ -1,0 +1,12 @@
+.thumbnails-container > a {
+    font-size: 0;
+}
+
+.thumbnails-container {
+    line-height: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hide {
+    opacity: 0;
+}

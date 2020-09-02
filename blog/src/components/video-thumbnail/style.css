@@ -1,0 +1,98 @@
+.thumbnail {
+  display: inline-block;
+  margin: 2px;
+  cursor: pointer;
+  position: relative;
+  background: black;
+  width: 350px;
+  height: 230px;
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 400px) {
+  .thumbnail {
+    width: 270px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 530px) and (min-width: 401px) {
+  .thumbnail {
+    width: 340px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 531px) and (max-width: 740px) {
+  .thumbnail {
+    width: 230px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 741px) {
+  .thumbnail {
+    width: 250px;
+    height: 170px;
+  }
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0;
+  object-fit: cover;
+  filter: var(--video-from-filter);
+  transition: -webkit-filter ease-in-out 0.3s, filter ease-in-out 0.3s, opacity ease 1s;
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.gif {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  z-index: 6;
+}
+
+.pic {
+  left: 0;
+  position: absolute;
+  z-index: 5;
+}
+
+.thumbnail:hover > .img {
+  transition: -webkit-filter ease-in-out 0.3s, filter ease-in-out 0.3s;
+  filter: var(--video-to-filter);
+}
+
+.label {
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 0.2em;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  font-family: "Oswald", sans-serif;
+  z-index: 10;
+  font-weight: 200;
+  width: 100%;
+  padding: 0 10%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  text-align: center;
+  opacity: var(--video-label-opacity-from);
+  transition: opacity ease-out 0.4s,
+    transform ease-in-out 0.3s;
+}
+
+.thumbnail:hover > .label {
+  opacity: var(--video-label-opacity-to);
+  transform: scale(1.1);
+}
