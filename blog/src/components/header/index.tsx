@@ -1,16 +1,19 @@
 import React, { PureComponent } from "react"
 
-import cn from "classnames"
+import cn from 'classnames'
 
 import style from "./style.module.css"
 
 import Menu from "./menu"
 
-const defaultLinks = [{ title: "portfolio", url: "/" }]
+const defaultLinks = [{ title: "portfolio", url: "/" }, { title: "ff", url: "/bio" }]
 
-class HeaderPage extends PureComponent {
+type Props = {
+  title: string, subtitle: string, theme: string, pages: Array<any>
+}
+
+class HeaderPage extends PureComponent<Props> {
   changeTheme = () => {
-    console.log("change theme")
     const theme = localStorage.getItem("theme")
 
     if (theme === "dark") {
@@ -25,11 +28,9 @@ class HeaderPage extends PureComponent {
   render() {
     let { title, subtitle, theme } = this.props
 
-theme = "dark"
     const links = [
       ...defaultLinks,
     ]
-
 
     return (
       <React.Fragment>
@@ -76,11 +77,6 @@ theme = "dark"
       </React.Fragment>
     )
   }
-}
-
-HeaderPage.defaultProps = {
-  title: "SSS",
-  subtitle: "DSFSDF",
 }
 
 export default HeaderPage

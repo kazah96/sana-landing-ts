@@ -1,26 +1,33 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import style from './style.module.css'
+import Link from '../../active-link'
 
-class Menu extends PureComponent {
-  render() {
-    const { links } = this.props
+type Props = {
+  links: { title: string, url: string }[]
+}
 
-    return (
-      <React.Fragment>
-        <nav className={style.menu}>
-          <ul>
-            {links.map(({ title, url }) => {
-              return (
-                <li key={title}>
-                 <title> {url} </title>
-                </li>
-              )
-            })}
-          </ul>
-        </nav>
-      </React.Fragment>
-    )
-  }
+const Menu: React.FC<Props> = (props) => {
+  const { links } = props
+
+  return (
+    <React.Fragment>
+      <nav className={style.menu}>
+        <ul>
+          {links.map(({ title, url }) => {
+            return (
+              <li key={title}>
+                <Link activeClassName={style.selected} href={url}>
+                  <a className={style.link} >
+                    {title}
+                  </a>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+    </React.Fragment>
+  )
 }
 
 export default Menu

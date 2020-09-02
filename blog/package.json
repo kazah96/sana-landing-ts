@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@types/classnames": "^2.2.10",
+    "axios": "^0.20.0",
+    "axios-mock-adapter": "^1.18.2",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -14,28 +17,28 @@
     "react-media": "^1.10.0"
   },
   "devDependencies": {
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
     "@svgr/webpack": "^5.2.0",
-    "typescript": "^4.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^13.9.0",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "2.23.0",
     "@typescript-eslint/parser": "2.23.0",
+    "dotenv": "^8.2.0",
     "eslint": "7.8.1",
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.20.6",
-    "dotenv": "^8.2.0",
-    "next": "^9.5.3",
     "ffmpeg": "^0.0.4",
-    "jest": "^26.4.2",
     "fluent-ffmpeg": "^2.1.2",
-    "prettier": "^1.19.1"
+    "jest": "^26.4.2",
+    "next": "^9.5.3",
+    "prettier": "^1.19.1",
+    "typescript": "^4.0.2"
   },
   "keywords": [
     "gatsby"

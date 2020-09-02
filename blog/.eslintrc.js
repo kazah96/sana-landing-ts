@@ -20,11 +20,6 @@ module.exports = {
   ],
   // Движок парсинга
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    // Движку нужен проект TS для правил с типами
-    project: "tsconfig.json",
-    tsconfigRootDir: "."
-  },
   settings: {
     react: {
       createClass: "createReactClass", // Regex for Component Factory to use,
