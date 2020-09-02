@@ -1,9 +1,24 @@
 import React, { PureComponent } from "react"
 import style from "./style.module.css"
-import PropTypes from "prop-types"
 import cn from "classnames"
+import Thumbnail from './thumbnail'
 
-class VideoThumbnail extends PureComponent {
+type Props = {
+  id: number
+  imgUrl: string,
+  webmUrl: string,
+  name: string,
+  defaultActive?: boolean
+}
+
+type State = {
+  isLoading: boolean
+}
+
+class VideoThumbnail extends PureComponent<Props, State> {
+  video: React.RefObject<any>
+  timer: NodeJS.Timeout
+
   constructor(props) {
     super(props)
 
@@ -14,13 +29,6 @@ class VideoThumbnail extends PureComponent {
     }, 700)
   }
 
-  static propTypes = {
-    id: PropTypes.number,
-    imgUrl: PropTypes.string,
-    webmUrl: PropTypes.string,
-    name: PropTypes.string,
-    defaultActive: PropTypes.bool
-  }
   state = {
     isLoading: true
   }
@@ -60,17 +68,10 @@ class VideoThumbnail extends PureComponent {
   render() {
     const { imgUrl, webmUrl, name } = this.props
     const { isLoading } = this.state
-    const thumbClass = style.thumbnail
     const videoClass = cn(style.img, { [style.hide]: isLoading })
 
     return (
-      <span
-        className={thumbClass}
-        role="link"
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        tabIndex={0}
-      >
+      <Thumbnail onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
         <video
           ref={this.video}
           onError={
@@ -88,7 +89,7 @@ class VideoThumbnail extends PureComponent {
           {/* Костыль для того чтоб на айфоне лоадер отрабатывал нормально. Нужно пофиксить в дальнейшем*/}
         </video>
         <div className={style.label}>{name}</div>
-      </span>
+      </Thumbnail>
     )
   }
 }

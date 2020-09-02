@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Link from 'next/link'
 
 import style from "./style.module.css"
+import AddVideo from "../components/video-thumbnail/add-video"
 
 const pageTitle = "Portfolio"
 
@@ -55,6 +56,7 @@ const Portfolio: React.FC<Props> = (props) => {
     <>
       <SEO lang="en" title={pageTitle} description={"Portfolio main page"} />
       <div className={ style.thumbnails_container}>
+        <AddVideo />
         {videos.map(({ imgUrl, webmUrl, title }, idx) => {
 
           return (
