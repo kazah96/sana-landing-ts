@@ -60,4 +60,4 @@ router.post('/new', (ctx, next) => {
 
 // Routes will go here
 
-export { router }
+export default router

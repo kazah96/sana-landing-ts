@@ -47,9 +47,16 @@ const Portfolio: React.FC<Props> = (props) => {
   const [showModal, setShowModal] = useState(false);
 
   async function fetchVideos() {
-    const videos = await api.get('/videos');
+    let videos = null;
 
-    setVideos(videos.data)
+    try{ 
+      videos = await api.get('/api/videos');
+    }
+    catch (e) {
+      console.log(e)
+    }
+
+    setVideos(videos ? videos.data : [])
   }
 
   useEffect(() => {

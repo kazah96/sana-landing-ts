@@ -1,0 +1,9 @@
+version: '2.0'
+services:
+  web:
+    build: docker/nginx
+    ports:
+    - 80:80
+    - 3005:3005
+  server:
+    build: .

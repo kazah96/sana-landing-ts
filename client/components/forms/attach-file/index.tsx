@@ -3,17 +3,12 @@ import style from '../style.module.css'
 import { debug } from 'console'
 
 type Props = {
-  // text: string,
-  // onClick: () => void
+  // onChange: string,
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const AttachFile: React.FC<Props> = ({ }) => {
+const AttachFile: React.FC<Props> = ({ onChange }) => {
   const onClick = () => { }
-
-  const onChange = (e) => {
-    const formData = new FormData()
-    formData.append('file', e.target.files[0])
-  }
 
   return (
     <div className={style.attach}>

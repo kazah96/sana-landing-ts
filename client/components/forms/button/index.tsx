@@ -8,7 +8,7 @@ type Props = {
 
 const Input: React.FC<Props> = ({ onClick, text }) => {
   return (
-    <button onClick={onClick} className={style.button}>
+    <button type="button" onClick={onClick} className={style.button}>
       {text}
     </button>
   )
