@@ -16,7 +16,6 @@ const api = axios.create({
 });
 
 mock.onGet("/videos").reply(200, [
-
   {
     imgUrl: 'https://umirzakov.site/static/ca11129044836553776d1bbd59807b73/empty_city.jpg',
     webmUrl: 'https://umirzakov.site/static/cbd021cd0c0101b25eaa3f58d9b924a2/empty_city.webm',

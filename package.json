@@ -6,15 +6,21 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@types/classnames": "^2.2.10",
+    "@types/koa": "^2.11.4",
     "axios": "^0.20.0",
     "axios-mock-adapter": "^1.18.2",
     "classnames": "^2.2.6",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-router": "^9.4.0",
+    "nodemon": "^2.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-markdown": "^4.3.1",
-    "react-media": "^1.10.0"
+    "react-media": "^1.10.0",
+    "ts-node": "^9.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.2.0",
@@ -45,11 +51,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "convert": "node ./convert.js files",
+    "server:run": "nodemon server/src/index.ts",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "dev": "next client --port 3005",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "next client --port 3005"
   },
   "repository": {
     "type": "git",

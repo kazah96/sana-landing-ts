@@ -1,16 +1,3 @@
-.thumbnails_container > a {
-    font-size: 0;
-}
-
-.thumbnails_container {
-    line-height: 0;
-    transition: opacity 0.5s ease;
-}
-
-.hide {
-    opacity: 0;
-}
-
 .form {
     margin-top: 50px;
     width: 400px;

@@ -4,11 +4,12 @@ import cn from 'classnames'
 import { stat } from 'fs'
 
 type Props = {
+  text: string
 }
 
-const Label: React.FC<Props> = ({ }) => {
+const Label: React.FC<Props> = ({ text }) => {
   return (
-    <label className={style.label}> Label</label>
+    <label className={style.label}> {text}</label>
   )
 }
 

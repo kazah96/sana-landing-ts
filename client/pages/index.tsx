@@ -12,7 +12,8 @@ import AddVideo from "../components/video-thumbnail/add-video"
 import DraggableItem from "../components/draggable"
 import Modal from "../components/modal"
 
-import { Input, Label } from "../components/forms"
+import { Input, Label, Form, InputGroup, Button } from "../components/forms"
+import UploadVideoForm from "../components/upload-video-form"
 
 const pageTitle = "Portfolio"
 
@@ -55,11 +56,9 @@ const Portfolio: React.FC<Props> = (props) => {
     fetchVideos()
   }, [])
 
-  // const videos = sortVideos(this.props.data.allStrapiVideo.edges)
-
   const onMouseOver = (e) => {
-    console.log(e)
   }
+
   return (
     <>
       <SEO lang="en" title={pageTitle} description={"Portfolio main page"} />
@@ -83,14 +82,7 @@ const Portfolio: React.FC<Props> = (props) => {
         })}
         <AddVideo onClick={() => setShowModal(true)} />
       </div>
-      {showModal && <Modal onClose={() => setShowModal(false)}>
-
-        THIS IS MODEAL
-        <form className={style.form}>
-          <Label /><Input />
-
-        </form>
-      </Modal>}
+      <UploadVideoForm show={showModal} onClose={() => setShowModal(false)} />
     </>
   )
 }

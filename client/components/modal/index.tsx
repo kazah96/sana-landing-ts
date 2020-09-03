@@ -6,10 +6,13 @@ type Props = {
   onClose: () => void
 }
 
-const Modal: React.FC<Props> = ({ children }) => {
+const Modal: React.FC<Props> = ({ children, onClose }) => {
 
   return <Fragment>
     <div className={style.modal}>
+      <div className={style.header}>
+        <span className={style.exit} onClick={onClose}>X</span>
+      </div>
       {children}
     </div>
   </Fragment>

@@ -14,7 +14,9 @@ const Input: React.FC<Props> = ({ }) => {
   }
 
   return (
-    <input className={style.input} onChange={onChange} value={value} />
+    <div className={style.input_container}>
+      <input className={style.input} onChange={onChange} value={value} />
+    </div>
   )
 }
 
